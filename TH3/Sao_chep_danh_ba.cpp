@@ -37,7 +37,7 @@ int main ()
     ofstream out{"DIENTHOAI.txt"};
     string s, date, name;
     vector<info> v;
-    while(getline(cin, s))
+    while(getline(in, s))
     {
         string tmp = "";
         stringstream ss(s);
@@ -58,7 +58,7 @@ int main ()
              } 
     }
     sort(v.begin(), v.end(), cmp);
-    for ( auto i : v ) cout << i.name << ": " << i.contact << " " << i.date << endl;
+    for ( auto i : v ) out << i.name << ": " << i.contact << " " << i.date << endl;
     in.close();
     out.close();
     return 0;
